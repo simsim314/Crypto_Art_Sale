@@ -44,10 +44,16 @@ function main () {
   var first = []
   
    for (i = 0; i < arr.length; i++) 
-    first.push(cube().translate(arr[i]).setColor([0.1,0.2,1,0.2]) );
-    
+{
+    //for yosezky - TODO automate for user list. 
+    if(arr[i][0] == 14 && arr[i][1] == 17 && arr[i][2] == 0)
+        first.push(cube().translate(arr[i]).setColor([0,0.98,0.6,1]) );
+    else 
+        first.push(cube().translate(arr[i]).setColor([0.1,0.2,1,0.2]) );
+}
     first.push(diplay_text(-150,-50,"Total cells: 6476"))    
-    first.push(diplay_text(-150,-90,"Cells of simsim314: 6476 (100%)"))
+    first.push(diplay_text(-150,-90,"Cells of simsim314: 6475 (99.985%)"))
+    first.push(diplay_text(-150,-130,"Cells of yosezky: 1 (0.015%)"))
     
  return unite_arr(first);
 }
